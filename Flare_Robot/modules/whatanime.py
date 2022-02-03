@@ -53,7 +53,7 @@ async def whatanime(c: Client, m: Message):
         if not getattr(reply, 'empty', True):
             media = reply.photo or reply.animation or reply.video or reply.document
     if not media:
-        await m.reply_text('Please reply it to a Photo or Gif or Video to work')
+        await m.reply_text("That's not how it works dude! Please reply it to a Photo or Gif or Video to see the results. They might not be accurate though.")
         return
     with tempfile.TemporaryDirectory() as tempdir:
         reply = await m.reply_text('Downloading...')
@@ -146,8 +146,14 @@ async def progress_callback(current, total, reply):
             progress_callback_data[message_identifier] = last_edit_time, prevtext, start_time
 
 __help__ = """
-/whatanime :- Please reply to a Gif or Photo or Video,
+✧ /whatanime or /sauce :- Please reply to a Gif or Photo or Video,
 You saw a good anime video, photo, gif but dont know what is that anime's name?
 This is where whatanime comes in, just reply to that media with /whatanime and it will search the anime name for you from anilist.
 """
 __mod_name__ = "WhatAnime"
+
+WA_HANDLER = DisableAbleCommandHandler(
+    ["whatanime", "sauce"], whatanime, pass_args=True, admin_ok=True
+)
+
+dispatcher.add_handler(WA_HANDLER)
