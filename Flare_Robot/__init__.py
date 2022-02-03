@@ -94,7 +94,7 @@ if ENV:
     BOT_ID = os.environ.get ("BOT_ID", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
-    FLARE_PHOTO = os.environ.get("FLARE_PHOTO", "https://telegra.ph/file/2a171330f0ad1fc02465c.jpg")
+    FLARE_PHOTO = os.environ.get("FLARE_PHOTO", "https://telegra.ph/file/5543dfa41fe351e2d66b7.jpg")
     BOT_NAME = os.environ.get("BOT_NAME", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
@@ -176,7 +176,7 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(2105723446)
+DEV_USERS.add(866830519)
 
 
 
