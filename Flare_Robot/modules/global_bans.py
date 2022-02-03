@@ -91,32 +91,32 @@ def gban(update: Update, context: CallbackContext):
 
     if int(user_id) in DEV_USERS:
         message.reply_text(
-            "That user is member of the WIZARD I can't act against our own.",
+            "That user is member of the Conductor!! I can't act against someone like that.",
         )
         return
 
     if int(user_id) in DRAGONS:
         message.reply_text(
-            "! Why are you guys turning on each other?",
+            "Huh ! Why are you guys turning on each other?",
         )
         return
 
     if int(user_id) in DEMONS:
         message.reply_text(
-            "OOOH someone's trying to gban a Demon! *grabs popcorn*",
+            "OOOH someone's trying to gban a D2 Slayer! *grabs popcorn* ! Go and slay some D2's already",
         )
         return
 
     if int(user_id) in TIGERS:
-        message.reply_text("That's a Tiger Wizard! They cannot be banned!")
+        message.reply_text("That's a Defenders ! They cannot be banned!")
         return
 
     if int(user_id) in WOLVES:
-        message.reply_text("That's a Wolfy! They cannot be banned!")
+        message.reply_text("That's a Melody Creator! They cannot be banned!")
         return
 
     if user_id == bot.id:
-        message.reply_text("You uhh...want me to punch myself?")
+        message.reply_text("You uhh...want me to punch myself? Only my Maestro can destroy me")
         return
 
     if user_id in [777000, 1087968824]:
@@ -176,7 +176,7 @@ def gban(update: Update, context: CallbackContext):
         chat_origin = "<b>{}</b>\n".format(chat.id)
 
     log_message = (
-        f"#GBANNED\n"
+        f"#GBANNED!! YESSSS\n"
         f"<b>Originated from:</b> <code>{chat_origin}</code>\n"
         f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
         f"<b>Banned User:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
@@ -257,9 +257,9 @@ def gban(update: Update, context: CallbackContext):
 
     if gban_time > 60:
         gban_time = round((gban_time / 60), 2)
-        message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
+        message.reply_text("Done! Gbanned. I, @Destiny_x_Bot feel sorry for you.", parse_mode=ParseMode.HTML)
     else:
-        message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
+        message.reply_text("Done! Gbanned. I, @Destiny_x_Bot feel sorry for you.", parse_mode=ParseMode.HTML)
 
     try:
         bot.send_message(
@@ -272,6 +272,7 @@ def gban(update: Update, context: CallbackContext):
         )
     except:
         pass  # bot probably blocked by user
+
 
 
 @run_async
@@ -300,7 +301,7 @@ def ungban(update: Update, context: CallbackContext):
         message.reply_text("This user is not gbanned!")
         return
 
-    message.reply_text(f"I'll give {user_chat.first_name} a second chance, globally.")
+    message.reply_text(f"I'll give {user_chat.first_name} an another chance, globally ofcourse. Be grateful!!!.")
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
@@ -540,18 +541,21 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = f"""
-*Admins only:*
- • `/antispam <on/off/yes/no>`*:* Will toggle our antispam tech or return your current settings.
 
+*Admins only:*
+ ✧ `/antispam <on/off/yes/no>`*:* Will toggle our antispam tech or return your current settings.
+ 
 Anti-Spam, used by bot devs to ban spammers across all groups. This helps protect \
 you and your groups by removing spam flooders as quickly as possible.
-*Note:* Users can appeal gbans or report spammers at @{SUPPORT_CHAT}
-
+*Note:* Users can appeal gbans or report spammers at @unmei_support
 This also integrates @Spamwatch API to remove Spammers as much as possible from your chatroom!
+
 *What is SpamWatch?*
 SpamWatch maintains a large constantly updated ban-list of spambots, trolls, bitcoin spammers and unsavoury characters[.](https://telegra.ph/file/f584b643c6f4be0b1de53.jpg)
 Constantly help banning spammers off from your group automatically So, you wont have to worry about spammers storming your group.
+
 *Note:* Users can appeal spamwatch bans at @SpamwatchSupport
+
 """
 
 GBAN_HANDLER = CommandHandler("gban", gban)
