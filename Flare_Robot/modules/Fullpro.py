@@ -98,7 +98,7 @@ async def purge(client, message):
             else:
                 await message.reply_text(
                     "Reply To A Message To Delete It,"
-                    " Don't Make Fun Of Yourself!"
+                    " Wait!!! Let me laugh in the corner for this!"
                 )
         else:
             await message.reply_text("Your Don't Have Enough Permissions!")
