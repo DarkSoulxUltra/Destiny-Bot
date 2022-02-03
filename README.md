@@ -1,22 +1,22 @@
-# Flare-Robot
-![Flare Arlgrande](https://telegra.ph/file/ba4cf0f81f99f13f683c0.jpg)
-# Flare Arlgrande
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6141417ceaf84545bab6bd671503df51)](https://app.codacy.com/gh/Asta-vir/Flare-Robot?utm_source=github.com&utm_medium=referral&utm_content=Asta-vir/Flare-Robot&utm_campaign=Badge_Grade_Settings)  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Asta-vir/Flare_Robot/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com) [![Updates channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/Freia_Updates)
+# Destiny Robot
+![Unmei (Destiny)](https://telegra.ph/file/cb57c2af871c60bfdf732.jpg)
+# Unmei Destiny
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/729d680436084e0a9cb16f0e875dc097)](https://www.codacy.com/gh/DarkSoulxUltra/Destiny-Bot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DarkSoulxUltra/Destiny-Bot&amp;utm_campaign=Badge_Grade_Settings)[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/DarkSoulxUltra/Destiny-Bot/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com) [![Updates channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/unmei_updates)
 
+Note : Base Repo is taken from [Flare](https://t.me/Flare_Robot), We haven't messed around much of the code, just changed mostly the support group links, update channel links, little pattern of display, images and gifs, the bot name and the owner name.
 
-A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed persona to make Flare is suitable for Anime and Manga group chats. 
+It is a Telegram group management bot running on python3 with a sqlalchemy database and the theme persona to make Unmei is suitable for Anime and Manga group chats.
 
-Can be found on telegram as [Flare](https://t.me/Flare_robot).
+Can be found on telegram as [Unmei (Destiny)](https://t.me/Destiny_x_Bot).
 
-The Support group can be reached out to at [Flare Support](https://t.me/Freia_Support), where you can ask for help about [Flare](https://t.me/Flare_Robot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Unmei Support](https://t.me/unmei_support), where you can ask for help about [Unmei](https://t.me/Destiny_x_Bot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
-Owner bot [ASTA](https://t.me/Asta_Silva02) he leaved the telegram for a while he will be back soon.
 
 ## How to setup/deploy.
 
 ### Read these notes carefully before proceeding 
- - Edit any mentions of @Onepunchsupport to your own support chat
- - Your code must be open source and a link to your fork's repository must be there in the start reply of the bot [See this](https://github.com/Asta-vir/Flare-Robot/blob/shiken/Flare_Robot/__main__.py#L25)
+ - Edit any mentions of @Onepunchsupport to your own support chat / For this repo, change mention of @unmei_support to your own support group.
+ - Your code must be open source and a link to your fork's repository must be there in the start reply of the bot [See this](https://github.com/DarkSoulxUltra/Destiny-Bot/blob/shiken/Flare_Robot/__main__.py#L25)
  - Lastly, if you are found to run this repo without the code being open sourced or the repository link not mentioned in the bot, we will push a gban for you in our network because of being in violation of the license, you are free to be a dick and not respect the open source code (we do not mind) but we will not be having you around our chats
  - This repo does not come with technical support, so DO NOT come to us asking help about deploy/console errors
 
@@ -30,7 +30,7 @@ REMEMBER: Turn on worker dyno (Don't worry It's free :D) & Webhook
 Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.com/apps/(app-name)/settings and remove webhook and port.
 ```
 
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Asta-vir/Flare-Robot.git)
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DarkSoulxUltra/Destiny-Bot.git)
 
 </details>  
 <details>
@@ -57,13 +57,13 @@ An example `config.py` file could be:
 from Flare_Robot.sample_config import Config
 
 class Development(Config):
-    OWNER_ID = 2105723446  # your telegram ID
-    OWNER_USERNAME = "Asta_Silva02"  # your telegram username
+    OWNER_ID = 866830519  # your telegram ID
+    OWNER_USERNAME = "yameteee_yamete_kudasai"  # your telegram username
     API_KEY = "your bot api key"  # your api key, as provided by the @botfather
     SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
     JOIN_LOGGER = '-1234567890' # some group chat that your bot is a member of
     USE_JOIN_LOGGER = True
-    DRAGONS = [2105723446]  # List of id's for users which have sudo access to the bot.
+    DRAGONS = [866830519]  # List of id's for users which have sudo access to the bot.
     LOAD = []
     NO_LOAD = ['translation']
 ```
@@ -166,10 +166,10 @@ You can use [nssm](https://nssm.cc/usage) to install the bot as service on windo
 Make sure to edit the start and restart bats to your needs. 
 Note: the restart bat requires that User account control be disabled.
 
-For queries or any issues regarding the bot please open an issue ticket or visit us at [One Punch Support](https://t.me/Freia_Support)
+For queries or any issues regarding the bot please open an issue ticket or visit us at [Unmei Support](https://t.me/unmei_support)
 ## How to setup on Heroku 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Asta-vir/Flare-Robot.git) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DarkSoulxUltra/Destiny-Bot.git) 
 
 
 ## Credits
@@ -180,5 +180,5 @@ Also, missing proper credit for blacklistusers taken from TheRealPhoenixBot (wil
 
 Any other authorship/credits can be seen through the commits.
 
-Should any be missing kindly let us know at [Flare Support](https://t.me/Freia_Support) or simply submit a pull request on the readme.
+Should any be missing kindly let us know at [Unmei Support](https://t.me/unmei_support) or simply submit a pull request on the readme.
 	
