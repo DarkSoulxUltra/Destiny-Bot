@@ -36,8 +36,7 @@ def animequotes(update: Update, context: CallbackContext):
 
 __help__ = """
 
- • `/animequotes`*:* gives random anime quotes
-
+ ✧ `/animequotes`*:* gives random anime quotes
  
 
 """
