@@ -9,21 +9,21 @@ from Flare_Robot.events import register
 from Flare_Robot import telethn as tbot
 
 
-PHOTO = "https://telegra.ph/file/6266d4d7ce030b8a7cf2d.jpg"
+PHOTO = "https://telegra.ph/file/474d63c62a377356ab705.jpg"
 
 
 @register(pattern=("/alive"))
 async def awake(event):
-    TEXT = "**♡ I,m ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
-    TEXT += f"**♡ I'm Working With sᴇxʏ Speed** \n\n"
-    TEXT += f"**♡ ғʟᴀʀᴇ: LATEST Version** \n\n"
-    TEXT += f"**♡ My Creator: [ ᴀsᴛᴀ](http://t.me/Asta_silva02)** \n\n"
-    TEXT += f"**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support** \n\n"
-    TEXT += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**"
+    TEXT = "¤¤ 𝐇𝐞𝐲 𝐌𝐚𝐞𝐬𝐭𝐫𝐨, 𝐈'𝐦 𝐔𝐧𝐦𝐞𝐢! ¤¤\n\n"
+    TEXT += f"ø 𝐘𝐞𝐚𝐡!! 𝐃𝐨𝐧'𝐭 𝐛𝐨𝐭𝐡𝐞𝐫 𝐚𝐛𝐨𝐮𝐭 𝐦𝐲 𝐬𝐩𝐞𝐞𝐝 𝐟𝐨𝐫 𝐧𝐨𝐰 ø\n\n"
+    TEXT += f"ø 𝐔𝐍𝐌𝐄𝐈 : 𝐋𝐀𝐓𝐄𝐒𝐓 𝐕𝐄𝐑𝐒𝐈𝐎𝐍 ø\n\n"
+    TEXT += f"ø 𝐌𝐲 𝐌𝐚𝐞𝐬𝐭𝐫𝐨 (𝐂𝐫𝐞𝐚𝐭𝐨𝐫) : [ 𝐒𝐡𝐨𝐭𝐨](http://t.me/yameteee_yamete_kudasai) ø\n\n"
+    TEXT += f"ø ᴀɴʏ ɪ𝓼𝓼ᴜᴇ𝓼 ᴄᴏɴᴛᴀᴄᴛ us ʜᴇʀᴇ : @unmei_support ø\n\n"
+    TEXT += "♥ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ♥ (っ◔◡◔)っ "
     BUTTON = [
         [
-            Button.url("📢 Updates", "https://t.me/Freia_Updates"),
-            Button.url("🚑 Support", "https://t.me/Freia_Support"),
+            Button.url("📢 Updates", "https://t.me/unmei_updates"),
+            Button.url("🚑 Support", "https://t.me/unmei_support"),
         ]
     ]
     await tbot.send_file(event.chat_id, PHOTO, caption=TEXT, buttons=BUTTON)
