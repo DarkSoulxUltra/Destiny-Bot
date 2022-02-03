@@ -10,6 +10,7 @@ feedparser
 future
 geopy
 git+https://github.com/starry69/python-markdown2.git
+git+https://github.com/pyrogram/pyrogram.git
 #googletrans
 google_trans_new
 humanize
