@@ -58,10 +58,10 @@ def languages(update: Update, context: CallbackContext) -> None:
 __mod_name__ = "Translator"
 
 __help__ = """
- ❍ /tr or /tl (language code) as reply to a long message
+ ✧ /tr or /tl (language code) as reply to a long message
 *Example:* 
- ❍ /tr en*:* translates something to english
- ❍ /tr hi-en*:* translates hindi to english
+ ✧ /tr en*:* translates something to english
+ ✧ /tr hi-en*:* translates hindi to english
 *Language Codes*
 `af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,
 et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,
