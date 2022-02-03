@@ -73,59 +73,37 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-GROUP_START_IMG = "https://telegra.ph/file/2cd6f97e0cf04d63cabf4.mp4"
+GROUP_START_IMG = "https://telegra.ph/file/2d9b9613c4c7f8310c6d1.mp4"
 
-FLARE_PHOTO = "https://telegra.ph/file/2a171330f0ad1fc02465c.jpg"
+FLARE_PHOTO = "https://telegra.ph/file/cb57c2af871c60bfdf732.jpg"
 
 PM_START_TEXT = """
 ────「 {} 」────
 *Hey! {},*
-* I am an Anime themed advance group management bot with a lots of Features.*
+* I am an advance group management bot with a lots of Features. My Anime theme is from Takt OP.Destiny *
 ➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/852e96d6c59f2ccad32df.jpg) ××
+✧ Try The Help Buttons Below To Know My Abilities[.](https://telegra.ph/file/cb57c2af871c60bfdf732.jpg) ××
 """
 
 HELP_STRINGS = """
-Hey there, I'm Flare Robot !
+Hello there, I'm Unmei Robot ! Some people do call me Destiny!!
 To make me functional, make sure that i have enough rights in your group.
 Helpful commands:
-- /start: Starts me! You've probably already used this.
-- /help: Sends this message; I'll tell you more about myself!
-- /donate: Gives you info on how to support me and my creator.
-
+- /start: It will starts me! You've probably used this, as you are here now.
+- /help: Send this message to me; I'll tell you more about my features!
 All commands can be used with the following: / !
 List of all the Modules:
 """.format(
-    dispatcher.bot.first_name,
-    "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.",
-)
-
-buttons = [
-    [
-                        InlineKeyboardButton(
-                            text=f"Add Flare To Your Group",
-                            url=f"https://telegram.dog/Flare_Robot?startgroup=true")
-                    ],
-                   [
-                       InlineKeyboardButton(text="[► Help ◄]", callback_data="help_back"),
-                       InlineKeyboardButton(text="❔ Chit Chat", url="https://t.me/OtaKu_Gang1"),
-                       InlineKeyboardButton(text="[► Inline ◄]", switch_inline_query_current_chat=""),
-                     ],
-                    [                  
-                       InlineKeyboardButton(
-                             text="🚑 Support",
-                             url=f"https://telegram.dog/Freia_Support"),
-                       InlineKeyboardButton(
-                             text="📢 Updates",
-                             url="https://t.me/Freia_Updates")
-                     ], 
-    ]
+    dispatcher.bot.first_name, "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.")
+buttons = [[InlineKeyboardButton(text=f"Add Me To Your Group",url=f"https://telegram.dog/Destiny_x_Bot?startgroup=true")],[InlineKeyboardButton(text="[『 Help 』]", callback_data="help_back"),InlineKeyboardButton(text="❔ Chat and Req Anime?", url="https://t.me/tas_support"),InlineKeyboardButton(text="[『 Inline 』]", switch_inline_query_current_chat=""),],[InlineKeyboardButton(text="🚑 Support",url=f"https://telegram.dog/unmei_support"),InlineKeyboardButton(text="📢 Updates",url="https://t.me/unmei_updates")]]
 
 
+buttons = [[InlineKeyboardButton(text=f"Add Me To Your Group",url=f"https://telegram.dog/Destiny_x_Bot?startgroup=true")],[InlineKeyboardButton(text="[『 Help 』]", callback_data="help_back"),InlineKeyboardButton(text="❔ Chat and Req Anime?", url="https://t.me/tas_support"),InlineKeyboardButton(text="[『 Inline 』]", switch_inline_query_current_chat=""),],[InlineKeyboardButton(text="🚑 Support",url=f"https://telegram.dog/unmei_support"),InlineKeyboardButton(text="📢 Updates",url="https://t.me/unmei_updates")]]
 
-DONATE_STRING = """Durov Is my Cousin By The Way.."""
+
+#DONATE_STRING = """Durov Is my Cousin By The Way.."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -196,26 +174,25 @@ def test(update: Update, context: CallbackContext):
 
 @telethn.on(events.NewMessage(pattern="/check"))
 async def awake(event):
-  ғʟᴀʀᴇ = event.sender.first_name
-  ғʟᴀʀᴇ = "**♡ I,m ғʟᴀʀᴇ ʀᴏʙᴏᴛ 愛** \n\n"
-  ғʟᴀʀᴇ += "**♡ I'm Working With sᴇxʏ Speed**\n\n"
-  ғʟᴀʀᴇ += "**♡ ғʟᴀʀᴇ: LATEST Version**\n\n"
-  ғʟᴀʀᴇ += "**♡ My Creator:** [ᴀsᴛᴀ](t.me/Chifuyu_Matsuno_Kun)\n\n"
-  ғʟᴀʀᴇ += "**♡ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @Freia_Support **\n\n"
-  ғʟᴀʀᴇ += "**♡ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💘💘💘**\n\n"
-  FLARE_BUTTON = [
+  Unmei = event.sender.first_name
+  Unmei = "**✩✮ ɪ ᴀᴍ ᴜɴᴍᴇɪ, ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ** \n\n"
+  Unmei += "**✩✮ I'm working fine as up now 👌︎.**\n\n"
+  Unmei += "**✩✮ Unmei: Version 1.0**\n\n"
+  Unmei += "**✩✮ っ◔◡◔)っ ♥ My Maestro ♥:** [Shoto](t.me/yameteee_yamete_kudasai)\n\n"
+  Unmei += "**✩✮ ᴀɴʏ ɪssᴜᴇs ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ @unmei_support **\n\n"
+  Unmei += "**✩✮ ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ 💞**\n\n"
+  UNMEI_BUTTON = [
       [
-          Button.url("🚑 Support", f"https://t.me/{SUPPORT_CHAT}"),
-          Button.url("📢 Updates", "https://t.me/Freia_Updates")
+          Button.url("🚑 Support", f"https://t.me/unmei_support"),
+          Button.url("📢 Updates", "https://t.me/unmei_updates")
       ]
   ]
   await telethn.send_file(
       event.chat_id,
       FLARE_PHOTO,
-      caption = ғʟᴀʀᴇ,
-      buttons = FLARE_BUTTON,
+      caption = 𝚄𝙽𝙼𝙴𝙸,
+      buttons = UNMEI_BUTTON,
   )
-
 
 @run_async
 def start(update: Update, context: CallbackContext):
@@ -233,7 +210,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="[► Back ◄]", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="[『 Back 』]", callback_data="help_back")]]
                     ),
                 )
 
@@ -264,7 +241,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= "I won't sleep until I satisfy you!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            GROUP_START_IMG, caption= "I won't sleep because I believe someone is waiting for your music. I'm awake since :</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -273,11 +250,11 @@ def start(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="🚑 Support",
-                            url=f"https://telegram.dog/Freia_Support",
+                            url=f"https://telegram.dog/unmei_support",
                         ),
                         InlineKeyboardButton(
                             text="📢 Updates",
-                            url="https://t.me/Freia_Updates",
+                            url="https://t.me/unmei_updates",
                         ),
                     ]
                 ]
@@ -412,7 +389,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="Help",
-                            url="t.me/Flare_Robot?start=help".format(context.bot.username),
+                            url="t.me/Destiny_x_Bot?start=help".format(context.bot.username),
                         ),
                     ],
                 ],
@@ -607,7 +584,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True,
         )
 
-        if OWNER_ID != 254318997 and DONATION_LINK:
+        if OWNER_ID != 866830519 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -655,7 +632,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[hey! I am back from OYO!!](https://telegra.ph/file/926039375cac9825e1e58.jpg)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[Hey! I have re-incarnated again from that Music of yours...](https://telegra.ph/file/5543dfa41fe351e2d66b7.jpg)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
@@ -696,7 +673,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Flare Robot is deployed successfully!")
+        LOGGER.info("Unmei (Destiny) is deployed successfully!")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
