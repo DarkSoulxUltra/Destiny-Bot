@@ -198,32 +198,32 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Pirate King  just joined the group!!!", reply_to_message_id=reply,
+                    "My Maestro just arrived in the chat!!!", reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
-                    f"The Bot Owner just joined the group"
+                    f"Takt, you finally arrived here."
                 )
                 continue
 
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Be Cool! A Retarded DEV just joined the group!",
+                    "A conductor has joined the group! Be prepared",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
-                    f"Bot Dev just joined the group"
+                    f"Bot Dev just joined the group."
                 )
                 continue
 
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "Whoa! a Yonkos just joined the group! Stay alert!",
+                    "Whoa! a Musicart just joined the group! Stay alert!",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -236,7 +236,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "A Warlord just joined the group! stay alert!",
+                    "A D2 Slayer just joined! D2's, be aware.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -249,7 +249,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Whitelisted
             elif new_mem.id in TIGERS:
                 update.effective_message.reply_text(
-                    " A New generation Just joined the group!", reply_to_message_id=reply,
+                    " A Defender arrived to secure this land from the D2's!", reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
@@ -261,7 +261,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Tigers
             elif new_mem.id in WOLVES:
                 update.effective_message.reply_text(
-                    "A Bounty Hunter just joined the group!", reply_to_message_id=reply,
+                    "A Melody Creator joined! Some people says Musicarts can make even D2s to dance", reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
@@ -565,14 +565,14 @@ def left_member(update: Update, context: CallbackContext):
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Pirate King  GOJOU! He left..", reply_to_message_id=reply,
+                    "Maestro!! Please don't leave me alone...", reply_to_message_id=reply,
                 )
                 return
 
             # Give the devs a special goodbye
             elif left_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "See you later at the Wizard HQ!",
+                    "See you later Aligator! OOPS, I meant Conductor* ",
                     reply_to_message_id=reply,
                 )
                 return
@@ -681,18 +681,18 @@ def welcome(update: Update, context: CallbackContext):
         if args[0].lower() in ("on", "yes"):
             sql.set_welc_preference(str(chat.id), True)
             update.effective_message.reply_text(
-                "Okay! I'll greet members when they join.",
+                "Okay! I'll greet members as you say whenever they join.",
             )
 
         elif args[0].lower() in ("off", "no"):
             sql.set_welc_preference(str(chat.id), False)
             update.effective_message.reply_text(
-                "I'll go loaf around and not welcome anyone then.",
+                "Fine!!! I won't welcome anyone.",
             )
 
         else:
             update.effective_message.reply_text(
-                "I understand 'on/yes' or 'off/no' only!",
+                "Duh!!!  I understand 'on/yes' or 'off/no' only!",
             )
 
 
@@ -735,16 +735,16 @@ def goodbye(update: Update, context: CallbackContext):
     elif len(args) >= 1:
         if args[0].lower() in ("on", "yes"):
             sql.set_gdbye_preference(str(chat.id), True)
-            update.effective_message.reply_text("Ok!")
+            update.effective_message.reply_text("Hmmmm! Fine.")
 
         elif args[0].lower() in ("off", "no"):
             sql.set_gdbye_preference(str(chat.id), False)
-            update.effective_message.reply_text("Ok!")
+            update.effective_message.reply_text("Hmmmm! Fine.")
 
         else:
             # idek what you're writing, say yes or no
             update.effective_message.reply_text(
-                "I understand 'on/yes' or 'off/no' only!",
+                "Duh!!!  I understand 'on/yes' or 'off/no' only!",
             )
 
 
@@ -825,7 +825,7 @@ def reset_goodbye(update: Update, context: CallbackContext) -> str:
 
     sql.set_custom_gdbye(chat.id, sql.DEFAULT_GOODBYE, sql.Types.TEXT)
     update.effective_message.reply_text(
-        "Successfully reset goodbye message to default!",
+        "Successfully reset goodbye message to default! Back to business..",
     )
 
     return (
@@ -848,7 +848,7 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
     if len(args) >= 1:
         if args[0].lower() in ("off", "no"):
             sql.set_welcome_mutes(chat.id, False)
-            msg.reply_text("I will no longer mute people on joining!")
+            msg.reply_text("Okay... Fine! I will allow them to write after they join.")
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
@@ -869,7 +869,7 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
         elif args[0].lower() in ["strong"]:
             sql.set_welcome_mutes(chat.id, "strong")
             msg.reply_text(
-                "I will now mute people when they join until they prove they're not a bot.\nThey will have 120seconds before they get kicked.",
+                "Evil Mode On!!! I am gonna mute people when they join, Hahaha!! They have to prove they're not a bot.\nThey will have just 120 seconds before they get kicked from here.",
             )
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
@@ -891,7 +891,6 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
         )
         msg.reply_text(reply, parse_mode=ParseMode.HTML)
         return ""
-
 
 @run_async
 @user_admin
@@ -1113,22 +1112,22 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
 *Admins only:*
- • `/welcome <on/off>`*:* enable/disable welcome messages.
- • `/welcome`*:* shows current welcome settings.
- • `/welcome noformat`*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
- • `/goodbye`*:* same usage and args as `/welcome`.
- • `/setwelcome <sometext>`*:* set a custom welcome message. If used replying to media, uses that media.
- • `/setgoodbye <sometext>`*:* set a custom goodbye message. If used replying to media, uses that media.
- • `/resetwelcome`*:* reset to the default welcome message.
- • `/resetgoodbye`*:* reset to the default goodbye message.
- • `/cleanwelcome <on/off>`*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
- • `/welcomemutehelp`*:* gives information about welcome mutes.
- • `/cleanservice <on/off`*:* deletes telegrams welcome/left service messages.
+ ✧ `/welcome <on/off>`*:* enable/disable welcome messages.
+ ✧ `/welcome`*:* shows current welcome settings.
+ ✧ `/welcome noformat`*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
+ ✧ `/goodbye`*:* same usage and args as `/welcome`.
+ ✧ `/setwelcome <sometext>`*:* set a custom welcome message. If used replying to media, uses that media.
+ ✧ `/setgoodbye <sometext>`*:* set a custom goodbye message. If used replying to media, uses that media.
+ ✧ `/resetwelcome`*:* reset to the default welcome message.
+ ✧ `/resetgoodbye`*:* reset to the default goodbye message.
+ ✧ `/cleanwelcome <on/off>`*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
+ ✧ `/welcomemutehelp`*:* gives information about welcome mutes.
+ ✧ `/cleanservice <on/off`*:* deletes telegrams welcome/left service messages.
  *Example:*
 user joined chat, user left chat.
 
 *Welcome markdown:*
- • `/welcomehelp`*:* view more formatting information for custom welcome/goodbye messages.
+ ✧ `/welcomehelp`*:* view more formatting information for custom welcome/goodbye messages.
 """
 
 NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members, new_member)
