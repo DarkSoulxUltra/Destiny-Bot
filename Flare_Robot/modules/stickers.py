@@ -425,7 +425,7 @@ def makepack_internal(
             )
         elif e.message in ("Peer_id_invalid", "bot was blocked by the user"):
             msg.reply_text(
-                "Contact me in PM first.",
+                "Contact me in PM first. ;)",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -601,12 +601,12 @@ async def drawText(image_path, text):
 
 
 __help__ = """
-  ➢ `/stickerid` : reply to a sticker to me to tell you its file ID.
-  ➢ `/getsticker` : reply to a sticker to me to upload its raw PNG file.
-  ➢ `/kang` : reply to a sticker to add it to your pack.
-  ➢ `/delkang` : reply to a Sticker to remove it from your pack
-  ➢ `/mmf` : memefiy any sticker and image.
-  ➢ `/stickers` : Find stickers for given term on combot sticker catalogue
+  ✧ `/stickerid` : reply to a sticker to me to tell you its file ID.
+  ✧ `/getsticker` : reply to a sticker to me to upload its raw PNG file.
+  ✧ `/kang` : reply to a sticker to add it to your pack.
+  ✧ `/delkang` : reply to a Sticker to remove it from your pack
+  ✧ `/mmf` : memefiy any sticker and image.
+  ✧ `/stickers` : Find stickers for given term on combot sticker catalogue
 """
 
 __mod_name__ = "Stickers"
