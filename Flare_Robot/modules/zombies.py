@@ -114,7 +114,7 @@ async def zombies(event):
 
 __help__ = """
   ADMINS ONLY
-  • `/zombies` :- searches deleted accounts
-  • `/zombies clean` :- removes deleted accounts from the group.
+  ✧ `/zombies` :- searches deleted accounts
+  ✧ `/zombies clean` :- removes deleted accounts from the group.
 """
 __mod_name__ = "Zombies"
