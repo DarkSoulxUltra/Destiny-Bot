@@ -1,15 +1,18 @@
 RUN_STRINGS = (
     "Now you see me, now you don't.", "ε=ε=ε=ε=┌(;￣▽￣)┘",
-    "Get back here!",
+    "Get over here!",
     "REEEEEEEEEEEEEEEEEE!!!!!!!",
     "Look out for the wall!",
     "Don't leave me alone with them!!",
-    "You've got company!",
+    "You've got a company!",
     "Chotto matte!",
     "Yare yare daze",
+    "Matte Kudasai",
+    "Yamete!!! Yamete Kudasai",
+    "WTF",
     "*Naruto run activated*",
     "*Nezuko run activated*",
-    "Hey take responsibilty for what you just did!",
+    "Hey!! Take responsibilty for what you just did!",
     "May the odds be ever in your favour.",
     "Run everyone, they just dropped a bomb 💣💣",
     "And they disappeared forever, never to be seen again.",
@@ -39,6 +42,7 @@ SLAP_CUTIEPII_TEMPLATES = (
 
 SLAP_TEMPLATES = (
     "{user2} was killed by magic.",
+    "{user2} became more useless than Sakura Haruno!!",
     "{user2} starved without pats.",
     "{user2} was knocked into the void by {user1}.",
     "{user2} fainted.",
@@ -116,6 +120,7 @@ SLAP_TEMPLATES = (
     "{user1} {throws} a master ball at {user2}, resistance is futile.",
     "{user1} hits {user2} with an action beam...bbbbbb (ง・ω・)ง ====*",
     "{user1} ara ara's {user2}.",
+    "{user1} Kamehame ha's {user2}."
     "{user1} ora ora's {user2}.",
     "{user1} muda muda's {user2}.",
     "{user2} was turned into a Jojo reference!",
@@ -485,6 +490,9 @@ GBAM_REASON = (
 
 GDNIGHT = [
     "`Good night keep your dreams alive`",
+    "`Oyasumi Onii-Chan`",
+    "`Oyasumi Nee-San`",
+    "`Oyasuminasai`",
     "`Night, night, to a dear friend! May you sleep well!`",
     "`May the night fill with stars for you. May counting every one, give you contentment!`",
     "`Wishing you comfort, happiness, and a good night’s sleep!`",
@@ -523,6 +531,8 @@ GDNIGHT = [
 
 GDMORNING = (
     "`Life is full of uncertainties. But there will always be a sunrise after every sunset. Good morning!`",
+    "`Ohayo`",
+    "`Ohayo Gozaimasu`",
     "`It doesn’t matter how bad was your yesterday. Today, you are going to make it a good one. Wishing you a good morning!`",
     "`If you want to gain health and beauty, you should wake up early. Good morning!`",
     "`May this morning offer you new hope for life! May you be happy and enjoy every moment of it. Good morning!`",
