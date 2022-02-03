@@ -109,9 +109,9 @@ def animetm(update: Update, context: CallbackContext):
 
 
 __help__ = """
-• `/animetm`*:* Find anime from animetm dubbers website.
-• `/animespot`*:* Find anime from animespot website.
-• `/kayo`*:* Find anime from animekayo website.
+✧ `/animetm`*:* Find anime from animetm dubbers website.
+✧ `/animespot`*:* Find anime from animespot website.
+✧ `/kayo`*:* Find anime from animekayo website.
 """
     
 __mod_name__ = "Anime Site Search"
