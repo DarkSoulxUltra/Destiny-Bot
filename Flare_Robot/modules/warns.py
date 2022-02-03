@@ -58,19 +58,19 @@ def warn(
 
     if user.id in TIGERS:
         if warner:
-            message.reply_text("Scouts cant be warned.")
+            message.reply_text("Defenders can't be warned.")
         else:
             message.reply_text(
-                "Scout triggered an auto warn filter!\n I can't warn Scouts but they should avoid abusing this.",
+                "Defender triggered an auto warn filter!\n I can't warn defenders but they should avoid abusing this.",
             )
         return
 
     if user.id in WOLVES:
         if warner:
-            message.reply_text("Garrison disasters are warn immune.")
+            message.reply_text("Melody Creators disasters are warn immune.")
         else:
             message.reply_text(
-                "Garrion Disaster triggered an auto warn filter!\nI can't warn wolves but they should avoid abusing this.",
+                "Melody Creator triggered an auto warn filter!\nI can't warn them but they should avoid abusing this.",
             )
         return
 
@@ -499,17 +499,17 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- • `/warns <userhandle>`*:* get a user's number, and reason, of warns.
- • `/warnlist`*:* list of all current warning filters
+ ✧ `/warns <userhandle>`*:* get a user's number, and reason, of warns.
+ ✧ `/warnlist`*:* list of all current warning filters
 
 *Admins only:*
- • `/warn <userhandle>`*:* warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
- • `/dwarn <userhandle>`*:* warn a user and delete the message. After 3 warns, the user will be banned from the group. Can also be used as a reply.
- • `/resetwarn <userhandle>`*:* reset the warns for a user. Can also be used as a reply.
- • `/addwarn <keyword> <reply message>`*:* set a warning filter on a certain keyword. If you want your keyword to \
-be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is an angry user`.
- • `/nowarn <keyword>`*:* stop a warning filter
- • `/warnlimit <num>`*:* set the warning limit
+ ✧ `/warn <userhandle>`*:* warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+ ✧ `/dwarn <userhandle>`*:* warn a user and delete the message. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+ ✧ `/resetwarn <userhandle>`*:* reset the warns for a user. Can also be used as a reply.
+ ✧ `/addwarn <keyword> <reply message>`*:* set a warning filter on a certain keyword. If you want your keyword to \b
+ a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is an angry user`.
+ ✧ `/nowarn <keyword>`*:* stop a warning filter
+ ✧ `/warnlimit <num>`*:* set the warning limit
  • `/strongwarn <on/yes/off/no>`*:* If set to on, exceeding the warn limit will result in a ban. Else, will just punch.
 """
 
