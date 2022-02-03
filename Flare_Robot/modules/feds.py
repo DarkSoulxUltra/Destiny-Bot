@@ -116,6 +116,7 @@ def new_fed(update: Update, context: CallbackContext):
                  "\n\nUse the command below to join the federation:"
                  "\n`/joinfed {}`".format(fed_name, fed_id, fed_id), parse_mode=ParseMode.MARKDOWN)
         try:
+	    bot, args = context.bot, context.args
             bot.send_message(
                 EVENT_LOGS,
                 "New Federation: <b>{}</b>\nID: <pre>{}</pre>".format(
