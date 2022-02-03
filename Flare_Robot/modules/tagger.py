@@ -12,7 +12,7 @@ from Flare_Robot.events import register as nobara
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "Hi Niggs I Call To All Of You"
+    mentions = "Hi Minna! I, the great Unmei Bot calls To All Of You. Be Grateful!!"
     chat = await event.get_input_chat()
     async for x in telethn.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
@@ -39,5 +39,5 @@ async def _(event):
 
 __mod_name__ = "Tagger"
 __help__ = """
-  ➢ `/tagall : Tag everyone in a chat
+  ✧ `/tagall : Tag everyone in a chat
 """
