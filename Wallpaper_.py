@@ -5,7 +5,7 @@ import random
 from pyrogram import filters
 from Flare_Robot import pbot as bot
 
-api_key = ('RIZMUN-PTUQTE-ZDXUWJ-AGZJVR-ARQ') # get it from @arqrobot
+api_key = ('HYSKMG-VATBRH-KDHVEF-QHXPZM-ARQ') # get it from @arqrobot
 api_url = "https://thearq.tech"
 
 
