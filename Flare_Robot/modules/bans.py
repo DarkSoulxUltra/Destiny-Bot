@@ -62,7 +62,7 @@ def ban(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("Dude at least refer some user to ban!")
+        message.reply_text("Dude, at least refer some user to ban!")
         return log_message
     try:
         member = chat.get_member(user_id)
@@ -77,23 +77,23 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("This is the Head Of School, I can't go against him!")
+            message.reply_text("Yeah! Like you can ban my Maestro. LMAO. He is kind, don't be hard on him")
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against our Quintuplets Members.")
+            message.reply_text("That's one of the conductor, I can't ban him/her..")
         elif user_id in DRAGONS:
             message.reply_text(
-                "This person is School Sensei, I can't fight them.."
+                "Musicarts can't be banned. Make a Note for it."
             )
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Quintuplets School to fight a High Ranked Student."
+                "Hmmm! If I will ban a D2 Slayer, then who will protect the people."
             )
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Quintuplets School to fight a Low Ranked Student."
+                "You know that's a defender, you can't ban him/her."
             )
         elif user_id in WOLVES:
-            message.reply_text("School kids abilities make them ban immune!")
+            message.reply_text("Melody Creators are Immune!")
         else:
             message.reply_text("This user has immunity and cannot be banned.")
         return log_message
@@ -124,11 +124,10 @@ def ban(update: Update, context: CallbackContext) -> str:
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         reply = (
             f"<code>❕</code><b>Ban Event</b>\n"
-            f"<code> </code><b>• User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+            f"<code> </code><b>•  User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
         )
         if reason:
-            reply += f"\n<code> </code><b>• Reason:</b> \n{html.escape(reason)}"
-
+            reply += f"\n<code> </code><b>•  Reason:</b> \n{html.escape(reason)}"        
         bot.sendMessage(
             chat.id,
             reply,
@@ -547,21 +546,21 @@ __mod_name__ = "Bans/Mutes"
 
 __help__ = """
 *User Commands:*
-  ➢ `/kickme`*:* kicks the user who issued the command
+  ✧ `/kickme`*:* kicks the user who issued the command
   
 *Admins only:*
-  ➢ `/ban <userhandle>`*:* bans a user. (via handle, or reply)
+  ✧ `/ban <userhandle>`*:* bans a user. (via handle, or reply)
   banme
-  ➢ `/sban <userhandle>`*:* Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
-  ➢ `/tban <userhandle> x(m/h/d)`*:* bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
-  ➢ `/unban <userhandle>`*:* unbans a user. (via handle, or reply)
-  ➢ `/kick <userhandle>`*:* kicks a user out of the group, (via handle, or reply)
-  ➢ `/mute <userhandle>`*:* silences a user. Can also be used as a reply, muting the replied to user.
-  ➢ `/tmute <userhandle> x(m/h/d)`*:* mutes a user for x time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
-  ➢ `/unmute <userhandle>`*:* unmutes a user. Can also be used as a reply, muting the replied to user.
-  ➢ `/zombies`*:* searches deleted accounts
-  ➢ `/zombies clean`*:* removes deleted accounts from the group.
-  ➢ `/snipe <chatid> <string>`*:* Make me send a message to a specific chat.
+  ✧ `/sban <userhandle>`*:* Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
+  ✧ `/tban <userhandle> x(m/h/d)`*:* bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+  ✧ `/unban <userhandle>`*:* unbans a user. (via handle, or reply)
+  ✧ `/kick <userhandle>`*:* kicks a user out of the group, (via handle, or reply)
+  ✧ `/mute <userhandle>`*:* silences a user. Can also be used as a reply, muting the replied to user.
+  ✧ `/tmute <userhandle> x(m/h/d)`*:* mutes a user for x time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+  ✧ `/unmute <userhandle>`*:* unmutes a user. Can also be used as a reply, muting the replied to user.
+  ✧ `/zombies`*:* searches deleted accounts
+  ✧ `/zombies clean`*:* removes deleted accounts from the group.
+  ✧ `/snipe <chatid> <string>`*:* Make me send a message to a specific chat.
 """
 
 
