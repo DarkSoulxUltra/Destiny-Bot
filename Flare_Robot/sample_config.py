@@ -19,7 +19,7 @@ class Config(object):
     TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     OWNER_ID = 866830519 # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OWNER_USERNAME = "yameteee_yamete_kudasai"
-    DB_URI = postgres://uuwbhoaahmqhiv:296c631b0ac4d06b85de57c4d7dfeadb0d6e60c4b6d2d6770d994768f8a54db1@ec2-52-55-62-6.compute-1.amazonaws.com:5432/dclba19sk0e8f2 # use your db
+    DB_URI = postgresql://ShotoT:S@h1l1296@localhost:5432/Unmei_DB # use your db
     SUPPORT_CHAT = "unmei_support"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
         -1001667046380
