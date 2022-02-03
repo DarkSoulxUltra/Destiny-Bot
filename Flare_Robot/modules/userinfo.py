@@ -169,7 +169,7 @@ def get_id(update: Update, context: CallbackContext):
             )
 
 
-@FlareTelethonClient.on(
+@DestinyTelethonClient.on(
     events.NewMessage(
         pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or []),
     ),
@@ -296,26 +296,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is <b>'Keyaru-Sama'</b>."
+        text += "\n\n This person is my Maestro - <b>'Takt'</b>."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of the 'Healer'."
+        text += "\n\nThis user is member of the 'Conductors', a Dev level member."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Knight'."
+        text += "\n\nThe Disaster level of this person is 'Musicarts', a Dragon."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Attacker'."
+        text += "\n\nThe Disaster level of this person is 'D2 Slayer', that's basically a Demon."
         disaster_level_present = True 
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Defender'."
+        text += "\n\nThe Disaster level of this person is 'Defender', a Tiger, Rawrrr!!!."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Demi-Human'."
+        text += "\n\nThe Disaster level of this person is 'Melody Creator', Haah!! a Wolf."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/Freia_Updates/5">◉</a>]'.format(
+        text += ' [<a href="https://t.me/unmei_updates/4">Ⓤ</a>]'.format(
             bot.username,
         )
 
@@ -429,17 +429,17 @@ def set_about_me(update: Update, context: CallbackContext):
 @sudo_plus
 def stats(update, context):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
-    status = "*╒═══「 System statistics 」*\n\n"
-    status += "*➢ Python Version:* " + python_version() + "\n"
-    status += "*➢ python-Telegram-Bot:* " + str(ptbversion) + "\n"
-    status += "*➢ Uptime:* " + get_readable_time((time.time()-StartTime)) + "\n"
+    status = "*╒═══『 System statistics 』*\n\n"
+    status += "*✧ Python Version:* " + python_version() + "\n"
+    status += "*✧ python-Telegram-Bot:* " + str(ptbversion) + "\n"
+    status += "*✧ Uptime:* " + get_readable_time((time.time()-StartTime)) + "\n"
     try:
         update.effective_message.reply_text(
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Freia_Updates)\n\n"
-            + "╘══「 by [ᴀsᴛᴀ](https://t.me/Asta_Silva02) 」\n",
+            + f"\n\n[➥ Support](https://t.me/{SUPPORT_CHAT}) | [➲ Updates](https://t.me/unmei_updates)\n\n"
+            + "╘══ 『 by [𝚂𝙷𝙾𝚃𝙾](https://t.me/yameteee_yamete_kudasai) 』\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
@@ -451,9 +451,9 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Freia_Updates/5)\n\n"
+                    + f"\n\n➥ [Support](https://t.me/{SUPPORT_CHAT}) | ➲ [Updates](https://t.me/unmei_updates/4)\n\n"
                 )
-                + "╘══「 by [Asta](https://t.me/Asta_Silva02) 」\n"
+                + "╘══『 by [𝚂𝙷𝙾𝚃𝙾](https://t.me/yameteee_yamete_kudasai) 』\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -513,7 +513,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust the Ackermans to set my bio.",
+                "Erm... yeah, I only trust the Conductors to set my bio.",
             )
             return      
 
@@ -554,27 +554,27 @@ __help__ = """
 *AFK:*
 When marked as AFK, any mentions will be replied to with a message to say you're not available!
 This also sends your last seen based on when you ran afk!
- • `/afk`*:* <reason>: mark yourself as AFK (away from keyboard).
- • `brb` <reason>: same as the afk command - but not a command.
+ ✧ `/afk`*:* <reason>: mark yourself as AFK (away from keyboard).
+ ✧ `brb` <reason>: same as the afk command - but not a command.
 *ID:*
- • `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
- • `/gifid`*:* reply to a gif to me to tell you its file ID.
+ ✧ `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
+ ✧ `/gifid`*:* reply to a gif to me to tell you its file ID.
 *Self addded information:*
- • `/setme <text>`*:* will set your info
- • `/me`*:* will get your or another user's info.
+ ✧ `/setme <text>`*:* will set your info
+ ✧ `/me`*:* will get your or another user's info.
 Examples:
  `/setme I am a garrison.`
  `/me @username(defaults to yours if no user specified)`
 *Information others add on you:*
- • `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
-• `/setbio <text>`*:* while replying, will save another user's bio
+ ✧ `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
+ ✧ `/setbio <text>`*:* while replying, will save another user's bio
 Examples:
  `/bio @username(defaults to yours if not specified).`
  `/setbio This user is a wolf` (reply to the user)
 *Overall Information about you:*
- • `/info`*:* get information about a user.
+ ✧ `/info`*:* get information about a user.
 *What is that health thingy?*
- Come and see [HP System explained](https://t.me/foundingtitanupdates/19)
+ Come and see [HP System explained](https://t.me/unmei_updates/5)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
